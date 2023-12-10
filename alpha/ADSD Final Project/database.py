@@ -39,7 +39,7 @@ def delete_user(user_id):
     user = User.get_by_id(user_id)
     user.delete_instance(recursive=True)
 
-# Add CRUD operations for Task
+# Adding CRUD operations for Task
 
 def get_tasks():
     return Task.select()

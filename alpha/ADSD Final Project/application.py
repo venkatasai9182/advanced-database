@@ -106,7 +106,7 @@ def get_delete_task(task_id):
 @route('/user_tasks')
 def get_user_tasks():
     try:
-        # Fetch the users and their associated tasks using a join
+        # Fetching the users and their associated tasks using a join
         users_with_tasks = User.select(User, Task).join(Task).group_by(User.id)
 
         # For debugging purposes
